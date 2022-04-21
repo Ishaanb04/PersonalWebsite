@@ -2,6 +2,12 @@ version: '3'
 
 services:
   nodejs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nodejs
+    container_name: clea
+    restart: unless-stopped
     #fill out the configuration here
     networks:
       - app-network
